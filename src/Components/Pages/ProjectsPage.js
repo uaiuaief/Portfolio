@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Banner } from '../Banner';
+import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { CTA } from '../CallToAction';
 
@@ -23,7 +24,6 @@ class Project extends Component {
           <div className="project-buttons">
             <a href={this.props.live_demo_link} className="primary-button live-demo">Prévia</a>
             <a target="blank" href={this.props.github_link} className="primary-button github-code">Ver Código Fonte</a>
-
           </div>
         </div>
       </div>
@@ -78,9 +78,9 @@ class ProjectsPage extends Component {
     }
 
     let projects = [ecommerce, country_explorer, chess]
-
     return (
       <>
+        <Header location={this.props.location} />
         <Banner
           title='Meus Projetos'
           description='For over 10 years I’ve been designing and developing websites. Below are some of my favourites. '
@@ -98,7 +98,7 @@ class ProjectsPage extends Component {
           ))}
         </section>
 
-        <CTA/>
+        <CTA />
       </>
     );
   }

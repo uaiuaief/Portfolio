@@ -2,6 +2,13 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            highlighted: props.location.pathname
+        }
+    }
+
     render() {
         return (
             <header>
@@ -11,10 +18,20 @@ class Header extends Component {
                     </div>
                     <div className="menu">
                         <nav>
-                            <Link to='/projects'>Projetos</Link>
-                            <Link to='/services'>Serviços</Link>
-                            <Link to='/about'>Sobre Mim</Link>
-                            <Link to='/contact'>Contato</Link>
+                            <Link
+                                className={this.state.highlighted === '/projects' ? 'highlighted' : ''}
+                                to='/projects'>
+                                Projetos
+                            </Link>
+                            <Link
+                                className={this.state.highlighted === '/services' ? 'highlighted' : ''}
+                                to='/services'>Serviços</Link>
+                            <Link
+                                className={this.state.highlighted === '/about' ? 'highlighted' : ''}
+                                to='/about'>Sobre Mim</Link>
+                            <Link
+                                className={this.state.highlighted === '/contact' ? 'highlighted' : ''}
+                                to='/contact'>Contato</Link>
                         </nav>
                     </div>
                 </div>

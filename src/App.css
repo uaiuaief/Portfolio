@@ -26,6 +26,7 @@ li {
 
 
 .primary-button {
+    display: inline-block;
     cursor: pointer;
     border-radius: 999px;
     background-color: #4b6cc1;
@@ -34,7 +35,17 @@ li {
     font-size: 1.375rem;
     border: none;
     margin-right: 20px;
+    transition: ease .3s;
+    border: 2px solid #4b6cc1;
 }
+
+.primary-button:hover {
+    transform: scale(1.075);
+    color: #4b6cc1;
+    border: 2px solid #4b6cc1;
+    background-color: inherit;
+}
+
 
 
 
@@ -68,21 +79,71 @@ nav a {
     font-size: 1.4rem;
     transition: ease .3s;
     line-height: 100%;
+    position: relative;
 }
 
 nav a:hover {
     color: #fff;
 }
 
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+    max-width: 20%;
+    width: 20%;
+
+    pointer-events: none;
+    background-color: #4b6cc1;
+    border-radius: 999px;
+    opacity: 0;
+    transition: ease .3s;
+}
+
+nav a:hover::after {
+    max-width: 70%;
+    width: 70%;
+    opacity: 1;
+}
+
+nav a.highlighted {
+    color: #fff;
+}
+
+nav a.highlighted::after {
+    max-width: 70%;
+    width: 70%;
+    opacity: 1;
+}
+
+
 .logo {
     font-size: 1.75rem;
     font-weight: 500;
-    height: 51px;
+    /* height: 51px; */
     letter-spacing: .063rem;
 }
 
 .logo a {
     color: #fff;
+}
+
+.logo a::after {
+    content: '';
+    display: block;
+    margin-top: 17px;
+    height: 6px;
+    background-color: #4b6cc1;
+    border-radius: 999px;
+    max-width: 30%;
+    transition: ease .3s;
+}
+
+.logo a:hover::after {
+    max-width: 15%;
 }
 
 
@@ -105,12 +166,14 @@ nav a:hover {
 .banner-description {
     font-size: 2.125rem;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 60%;
     text-align: center;
     color: rgb(171, 171, 171);
     font-weight: 300;
-    padding-bottom: 240px;
+    padding-bottom: 230px;
+    line-height: 140%;
+    transition: all ease .3s;
 }
 
 
@@ -137,9 +200,10 @@ nav a:hover {
 }
 
 .project-preview-image{
-    width: 57%;
+    width: 60%;
     padding: 45px;
     background-color: #f6f6f6;
+    border-radius: 6px;
 }
 
 .project-preview-image img{
@@ -149,7 +213,7 @@ nav a:hover {
 }
 
 .project-preview-content {
-    width: 38%;
+    width: 35%;
     /* padding: 50px; */
 }
 
@@ -168,6 +232,7 @@ nav a:hover {
 
 .tech-used {
     padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .tech-item {
@@ -180,7 +245,7 @@ nav a:hover {
 }
 
 .tech-item:not(:last-child){
-    margin-bottom: 30px;
+    margin-bottom: 23px;
 }
 
 
@@ -189,6 +254,7 @@ nav a:hover {
 }
 
 a.primary-button {
+    /* font-size: 1.2rem; */
     font-weight: 400;
 }
 
@@ -234,11 +300,28 @@ a.primary-button {
     flex-direction: column;
 }
 
+.cta-contact-info svg {
+    width: 24px;
+    fill: #4b6cc1;
+}
+
+.cta-contact-info div {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .cta-contact-info a {
+    margin-left: 15px;
     font-size: 1.25rem;
     font-weight: 500;
     text-transform: uppercase;
     color: rgba(255, 255, 255, .5);
+    transition: ease .3s;
+}
+
+.cta-contact-info a:hover {
+    color: #fff;
 }
 
 .cta-contact-info a:not(:last-child){
@@ -246,8 +329,12 @@ a.primary-button {
 }
 
 .cta-button {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     padding: 26px 48px;
+}
+
+.cta-button:hover {
+    color: #fff
 }
 
 
