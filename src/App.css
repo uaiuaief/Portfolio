@@ -8,6 +8,7 @@
 
 body {
     font-family: "Rubik","Arial",sans-serif;
+    font-family: "Rubik";
     color: #5e5e5e;
     font-size: 16px;
     font-weight: 300;
@@ -37,6 +38,7 @@ li {
     margin-right: 20px;
     transition: ease .3s;
     border: 2px solid #4b6cc1;
+    font-family: "Rubik","Arial",sans-serif;
 }
 
 .primary-button:hover {
@@ -180,6 +182,15 @@ nav a.highlighted::after {
 
 
 
+
+
+
+
+
+
+
+
+/* PROJECTS PAGE */
 #projects-page {
     padding-top: 100px;
     width: 90%;
@@ -257,12 +268,23 @@ a.primary-button {
     /* font-size: 1.2rem; */
     font-weight: 400;
 }
+/* END PROJECTS PAGE */
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+/* CALL TO ACTION */
 #cta {
     background-color: #191a1d;
     width: 100%;
@@ -336,11 +358,20 @@ a.primary-button {
 .cta-button:hover {
     color: #fff
 }
+/* END CALL TO ACTION */
 
 
 
 
 
+
+
+
+
+
+
+
+/* FOOTER */ 
 footer {
     background-color: #101114;
     margin-top: -1px;
@@ -353,3 +384,249 @@ footer {
     margin: auto;
     font-size: 1.125rem;
 }
+/* END FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICES PAGE */
+#services-page {
+    padding-top: 130px;
+}
+
+#services-page .service{
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 130px;
+}
+
+#services-page .service-inner{
+    display: flex;
+    background-color: #f6f6f6;
+    padding: 10%;
+    border-top: 6px solid #4b6cc1;
+    border-radius: 6px;
+}
+
+#services-page svg {
+    fill: #4b6cc1;
+    width: 150px;
+    display: block;
+}
+
+#services-page .icon-half{
+    width: 35%;
+}
+
+#services-page .text-half{
+    width: 75%;
+}
+
+#services-page .description {
+    padding-top: 40px;
+}
+
+#services-page .service-title {
+    font-size: 3.25rem;
+    line-height: 115%;
+    font-weight: 400;
+    color: #191a1d;
+}
+
+#services-page .service-subtitle {
+    font-size: 2.125rem;
+    line-height: 115%;
+    font-weight: 400;
+    color: #191a1d;
+}
+
+#services-page .description-text {
+    margin-top: 20px;
+    line-height: 160%;
+    font-size: 1.375rem;
+}
+
+
+
+/* END SERVICES PAGE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT PAGE */
+#about-page {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+#about-page .content {
+    max-width: 925px;
+    margin: auto;
+}
+
+#about-page .content .title {
+    font-size: 3.25rem;
+    line-height: 115%;
+    font-weight: 400;
+    color: #191a1d
+}
+
+#about-page .content .text {
+    margin-top: 20px;
+    line-height: 160%;
+    font-size: 1.375rem;
+}
+
+#about-page .content button {
+    margin-top: 20px;
+}
+
+#whyworkwithme {
+    margin-top: 100px;
+}
+/* END ABOUT PAGE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT PAGE */
+
+#contact-page {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+#contact-page .status {
+    max-width: 925px;
+    margin: auto;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 6%;
+    margin-bottom: 100px;
+    border-radius: 6px;
+    border-top: 6px solid #4b6cc1;
+}
+
+#contact-page .status h1 {
+    font-size: 3.125rem;
+    font-weight: 400;
+    color: #4b6cc1;
+}
+
+#contact-page .status h2 {
+    font-size: 2.125rem;
+    font-weight: 400;
+    color: #191a1d;
+}
+
+#contact-page .status h3 {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 1.625rem;
+}
+
+#contact-page form {
+    max-width: 925px;
+    margin: auto;
+}
+
+#contact-page form label{
+    display: block;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #919191;
+    letter-spacing: .063rem;
+}
+
+#contact-page .form-row-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-page .form-row-2 {
+    margin-top: 40px;
+}
+
+.form-row-1 .form-item {
+    width: 100%;
+}
+
+.form-row-1 .form-item:last-child{
+    margin-left: 35px
+}
+
+#contact-page form input {
+    font-weight: 100;
+    font-size: 1.25rem;
+    height: 70px;
+    width: 100%;
+    padding: 24px;
+    border: 2px solid #e2e2e2;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+#contact-page form input[value=""]:invalid {
+    border-color: #c1594b;
+}
+
+#contact-page form textarea{
+    resize: vertical;
+    font-weight: 100;
+    font-size: 1.25rem;
+    min-height: 240px;
+    width: 100%;
+    padding: 24px;
+    border: 2px solid #e2e2e2;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    -webkit-appearance: none;
+}
+
+#contact-page button {
+    display: block;
+    padding: 20px 30px;
+    margin: auto;
+    margin-top: 40px;
+    border: 2px solid #4b6cc1;
+    line-height: 100%;
+}
+
+
+
+/* END CONTACT PAGE */
