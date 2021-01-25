@@ -1,13 +1,37 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Banner extends Component {
   render() {
-    return (
-      <section id="banner">
-        <h1 className="banner-title">{this.props.title}</h1>
-        <h2 className="banner-description"> {this.props.description} </h2>
-      </section>
-    );
+    if (!this.props.home_page) {
+      return (
+        <section id="banner">
+          <div className="banner-inner">
+            <h1 className="banner-title">{this.props.title}</h1>
+            <h2 className="banner-description"> {this.props.description} </h2>
+          </div>
+        </section>
+      );
+    }
+    else {
+      return (
+        <section id="banner" className="home-page-banner">
+          <div className="banner-inner flex">
+            <div className="flex-item-1">
+              <h1 className="banner-title">Hey, I’m Endeavor. </h1>
+              <h2 className="banner-description">A web designer and developer from Southampton in the UK. I create bespoke websites to help people go further online. </h2>
+              <div className="btn-wrapper"> <Link to="/projects" className="primary-button">My Projects</Link> </div>
+            </div>
+            <div className="flex-item-2">
+              <div className="img-wrapper">
+                <img alt="selfie" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-7c90bd6680229987170ba9bd04777719&f=1&nofb=1" />
+              </div>
+            </div>
+          </div>
+        </section>
+      )
+
+    }
   }
 }
 

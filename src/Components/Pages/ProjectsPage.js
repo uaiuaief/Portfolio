@@ -4,6 +4,52 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { CTA } from '../CallToAction';
 
+
+const chess = {
+  title: 'Xadrez',
+  description: "Um jogo de xadrez no navegador onde você pode jogar com outro jogador ou contra o computador.",
+  image: 'http://images.chesscomfiles.com/uploads/images_users/tiny_mce/kiloNewton/phpFJ4rsl.png',
+  live_demo_link: '/',
+  github_link: 'https://github.com/uaiuaief/chess',
+  tech_used: [
+    'Javascript / CSS3 / HTML5',
+    'Python',
+    'Flask',
+    'Sunfish API'
+  ]
+}
+
+const country_explorer = {
+  title: 'Explorador de Países',
+  description: "Um site onde você pode aprender sobre novos países, sua língua, cultura e lugares para visitar.",
+  image: "https://user-images.githubusercontent.com/22801048/100171954-0b105280-2ea6-11eb-8faa-6ce592a85f7e.jpg",
+  live_demo_link: '/',
+  github_link: 'https://github.com/uaiuaief/country-explorer',
+  tech_used: [
+    'Javascript / CSS3 / HTML5',
+    'Google Search API',
+    'Rest Countries API',
+  ]
+}
+
+const ecommerce = {
+  title: 'E-commerce',
+  description: "Um e-commerce feito em React e Django, com sistema de pagamentos Stripe integrado.",
+  image: "http://24dlmn2bqamt1e72kah59881-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/ezCater-website.png",
+  live_demo_link: '/',
+  github_link: 'https://github.com/uaiuaief/ecommerce-project',
+  tech_used: [
+    'Javascript / CSS3 / HTML5',
+    'Python',
+    'Django Rest Framework',
+    'React js',
+    'Stripe'
+  ]
+}
+
+const project_list = [ecommerce, country_explorer, chess]
+
+
 class Project extends Component {
   render() {
     return (
@@ -35,49 +81,6 @@ class Project extends Component {
 
 class ProjectsPage extends Component {
   render() {
-    let chess = {
-      title: 'Xadrez',
-      description: "Um jogo de xadrez no navegador onde você pode jogar com outro jogador ou contra o computador.",
-      image: 'http://images.chesscomfiles.com/uploads/images_users/tiny_mce/kiloNewton/phpFJ4rsl.png',
-      live_demo_link: '/',
-      github_link: 'https://github.com/uaiuaief/chess',
-      tech_used: [
-        'Javascript / CSS3 / HTML5',
-        'Python',
-        'Flask',
-        'Sunfish API'
-      ]
-    }
-
-    let country_explorer = {
-      title: 'Explorador de Países',
-      description: "Um site onde você pode aprender sobre novos países, sua língua, cultura e lugares para visitar.",
-      image: "https://user-images.githubusercontent.com/22801048/100171954-0b105280-2ea6-11eb-8faa-6ce592a85f7e.jpg",
-      live_demo_link: '/',
-      github_link: 'https://github.com/uaiuaief/country-explorer',
-      tech_used: [
-        'Javascript / CSS3 / HTML5',
-        'Google Search API',
-        'Rest Countries API',
-      ]
-    }
-
-    let ecommerce = {
-      title: 'E-commerce',
-      description: "Um e-commerce feito em React e Django, com sistema de pagamentos Stripe integrado.",
-      image: "http://24dlmn2bqamt1e72kah59881-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/ezCater-website.png",
-      live_demo_link: '/',
-      github_link: 'https://github.com/uaiuaief/ecommerce-project',
-      tech_used: [
-        'Javascript / CSS3 / HTML5',
-        'Python',
-        'Django Rest Framework',
-        'React js',
-        'Stripe'
-      ]
-    }
-
-    let projects = [ecommerce, country_explorer, chess]
     return (
       <>
         <Header location={this.props.location} />
@@ -86,7 +89,7 @@ class ProjectsPage extends Component {
           description='For over 10 years I’ve been designing and developing websites. Below are some of my favourites. '
         />
         <section id="projects-page">
-          {projects.map(each => (
+          {project_list.map(each => (
             <Project
               title={each.title}
               description={each.description}
@@ -104,4 +107,4 @@ class ProjectsPage extends Component {
   }
 }
 
-export { ProjectsPage }
+export { ProjectsPage, Project, project_list }

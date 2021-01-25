@@ -157,6 +157,13 @@ nav a.highlighted::after {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
 }
 
+.banner-inner {
+    padding-bottom: 230px;
+    max-width: 925px;
+    margin: auto;
+
+}
+
 .banner-title {
     font-size: 4.5rem;
     text-align: center;
@@ -169,15 +176,245 @@ nav a.highlighted::after {
     font-size: 2.125rem;
     margin: auto;
     margin-top: 30px;
-    width: 60%;
+    /* width: 60%; */
     text-align: center;
     color: rgb(171, 171, 171);
     font-weight: 300;
-    padding-bottom: 230px;
     line-height: 140%;
     transition: all ease .3s;
 }
 
+#banner .btn-wrapper {
+    width: fit-content;
+    margin: auto;
+    margin-top: 35px;
+}
+
+#banner .primary-button {
+    font-size: 1.75rem;
+    padding: 22px 48px;
+}
+
+#banner .primary-button:hover {
+    color: white;
+}
+
+.home-page-banner {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.home-page-banner .banner-inner {
+    max-width: 1200px;
+    display: flex;
+}
+
+.home-page-banner .banner-title,
+.home-page-banner .banner-description {
+    text-align: left !important;
+}
+
+.home-page-banner .btn-wrapper {
+    margin-left: 0 !important;
+}
+
+.home-page-banner .flex-item-1 {
+    padding-right: 147px;
+}
+
+.home-page-banner .flex-item-2 {
+    padding: 50px;
+    background-color: #121316;
+    border-radius: 4px;
+}
+
+.home-page-banner .img-wrapper {
+    margin-bottom: -100px;
+}
+
+.home-page-banner .img-wrapper img {
+    width: 330px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* HOME PAGE */
+#home-page {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+#project-section, #services-section {
+    max-width: 1430px;
+    width: 90%;
+    margin: auto;
+}
+
+#home-page .section-title {
+    text-transform: uppercase;
+    border-bottom: 4px solid #f6f6f6;
+    margin-bottom: 60px;
+}
+
+#home-page .section-title h1 {
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    color: #919191;
+    font-weight: 500;
+    letter-spacing: 0.063em;
+}
+
+#home-page .project {
+    flex-direction: row;
+}
+
+.testimonial {
+    background-color: #f6f6f6;
+    clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 calc(100% - 100px));
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.testimonial-inner {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    max-width: 925px;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonial .quote-inner {
+    padding: 60px 0;
+    position: relative;
+}
+
+.testimonial .quote-inner::before, 
+.testimonial .quote-inner::after {
+    content: "";
+    position: absolute;
+
+    transform: translate(-50%);
+    width: 60px;
+    height: 6px;
+    background-color: #4b6cc1;
+    border-radius: 999px;
+}
+
+.testimonial .quote-inner::before {
+    top: 0;
+}
+
+.testimonial .quote-inner::after {
+    bottom: 0;
+}
+
+.testimonial .quote-text {
+    font-size: 2.875rem;
+    line-height: 135%;
+    color: #191a1d;
+}
+
+.testimonial .quote-text::before {
+    content: open-quote;
+}
+
+.testimonial .quote-text::after {
+    content: close-quote;
+}
+
+.testimonial .quote-author {
+    margin-top: 80px;
+    font-size: 1.625rem;
+}
+
+.testimonial .quote-author img {
+    display: block;
+    margin: auto;
+    border-radius: 999px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.testimonial .author-name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+#services-section {
+    padding: 130px 0;
+}
+
+#services-section .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#services-section .service {
+    width: 48.11%;
+    text-align: center;
+}
+
+#services-section .service-inner {
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-section .text-half,
+#services-section .icon-half {
+    width: initial;
+}
+
+#services-section .service-title {
+    font-size: 2.125rem;
+}
+
+#services-section .service-subtitle {
+    font-size: 1.625rem;
+    font-weight: 300;
+    line-height: 160%;
+}
+
+#services-section .description {
+    padding-top: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#services-section .icon-wrapper::after {
+    content: "";
+    display: block;
+    margin: 40px auto; 
+    height: 6px;
+    width: 100%;
+    max-width: 30px;
+    background-color: #4b6cc1;
+    border-radius: 999px;
+}
+
+#services-section svg {
+    max-width: 52px;
+    max-height: 52px;
+}
+
+#services-section .top-space {
+    padding-top: 80px;
+    text-align: center;
+}
+
+
+
+
+/* END HOME PAGE */
 
 
 
@@ -410,7 +647,7 @@ footer {
     padding-bottom: 130px;
 }
 
-#services-page .service-inner{
+.service .service-inner{
     display: flex;
     background-color: #f6f6f6;
     padding: 10%;
@@ -418,39 +655,39 @@ footer {
     border-radius: 6px;
 }
 
-#services-page svg {
+.service svg {
     fill: #4b6cc1;
     width: 150px;
     display: block;
 }
 
-#services-page .icon-half{
+.service .icon-half{
     width: 35%;
 }
 
-#services-page .text-half{
+.service .text-half{
     width: 75%;
 }
 
-#services-page .description {
+.service .description {
     padding-top: 40px;
 }
 
-#services-page .service-title {
+.service .service-title {
     font-size: 3.25rem;
     line-height: 115%;
     font-weight: 400;
     color: #191a1d;
 }
 
-#services-page .service-subtitle {
+.service .service-subtitle {
     font-size: 2.125rem;
     line-height: 115%;
     font-weight: 400;
     color: #191a1d;
 }
 
-#services-page .description-text {
+.service .description-text {
     margin-top: 20px;
     line-height: 160%;
     font-size: 1.375rem;
