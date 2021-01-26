@@ -69,7 +69,7 @@ class Project extends Component {
           </div>
           <div className="project-buttons">
             <a href={this.props.live_demo_link} className="primary-button live-demo">Prévia</a>
-            <a target="blank" href={this.props.github_link} className="primary-button github-code">Ver Código Fonte</a>
+            <a target="blank" href={this.props.github_link} className="primary-button github-code">Código Fonte</a>
           </div>
         </div>
       </div>

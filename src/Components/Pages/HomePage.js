@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Header } from '../Header';
 import { Banner } from '../Banner';
+import { CTA } from '../CallToAction';
 import { Project, project_list } from './ProjectsPage';
 import { ServiceProvided } from './ServicesPage';
 import { stripes_svg } from '../Svgs'
@@ -44,7 +45,7 @@ class HomePage extends Component {
         'picture': `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.-8QKMIQGgt1C5ZJzquVMvQAAAA%26pid%3DApi&f=1`
       },
       'capitão': {
-        'text': 'Já avisei que vai dar merda',
+        'text': `Seb is an excellent web designer and faultless technician. He’s a pleasure to work with, great value for money and will always go the extra mile when necessary.`,
         'author': 'Capitão Nascimento',
         'author_title': 'Capitão do Bope',
         'picture': `https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1167341457%2Fcapnascimento_400x400.png&f=1&nofb=1`
@@ -95,9 +96,7 @@ class HomePage extends Component {
             />
 
           </section>
-          <Testimonial
-            quote={quotes['capitão']}
-          />
+          <Testimonial quote={quotes['capitão']} />
 
           <section id="services-section">
             <div className="section-title">
@@ -115,11 +114,9 @@ class HomePage extends Component {
             </div>
           </section>
 
-          <Testimonial
-            quote={quotes['arnold']}
-          />
-
+          <Testimonial quote={quotes['arnold']} />
         </section>
+        <CTA/>
       </>
     );
   }
