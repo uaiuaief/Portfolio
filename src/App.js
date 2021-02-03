@@ -9,8 +9,6 @@ import { AboutPage } from './Components/Pages/AboutPage';
 import { ContactPage } from './Components/Pages/ContactPage';
 import { ServicesPage } from './Components/Pages/ServicesPage';
 
-import { Header } from './Components/Header';
-import { Banner } from './Components/Banner';
 import { Footer } from './Components/Footer';
 
 class App extends Component {

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { content } from './Content'
 
 class Banner extends Component {
   render() {
@@ -14,13 +15,14 @@ class Banner extends Component {
       );
     }
     else {
+      let text = content[window.language]['home-page']
       return (
         <section id="banner" className="home-page-banner">
           <div className="banner-inner flex">
             <div className="flex-item-1">
-              <h1 className="banner-title">Hey, I’m Endeavor. </h1>
-              <h2 className="banner-description">A web designer and developer from Southampton in the UK. I create bespoke websites to help people go further online. </h2>
-              <div className="btn-wrapper"> <Link to="/projects" className="primary-button">My Projects</Link> </div>
+              <h1 className="banner-title">{text['banner-title']}</h1>
+              <h2 className="banner-description">{text['banner-description']}</h2>
+              <div className="btn-wrapper"> <Link to="/projects" className="primary-button">{text['banner-button']}</Link> </div>
             </div>
             <div className="flex-item-2">
               <div className="img-wrapper">

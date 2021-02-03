@@ -1,11 +1,13 @@
 import { Component } from 'react';
+import { content } from './Content'
 
 class Footer extends Component {
   render() {
+    let text = content[window.language]['footer']
     return (
       <footer>
         <div className="footer-inner">
-          © 2021 John. All rights reserved.
+          {text['copyright']}
         </div>
       </footer>
     );

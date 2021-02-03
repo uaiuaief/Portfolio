@@ -1,57 +1,14 @@
 import { Component } from 'react';
 import { Banner } from '../Banner';
 import { Header } from '../Header';
-import { Footer } from '../Footer';
 import { CTA } from '../CallToAction';
-
-
-const chess = {
-  title: 'Xadrez',
-  description: "Um jogo de xadrez no navegador onde você pode jogar com outro jogador ou contra o computador.",
-  image: 'http://images.chesscomfiles.com/uploads/images_users/tiny_mce/kiloNewton/phpFJ4rsl.png',
-  live_demo_link: '/',
-  github_link: 'https://github.com/uaiuaief/chess',
-  tech_used: [
-    'Javascript / CSS3 / HTML5',
-    'Python',
-    'Flask',
-    'Sunfish API'
-  ]
-}
-
-const country_explorer = {
-  title: 'Explorador de Países',
-  description: "Um site onde você pode aprender sobre novos países, sua língua, cultura e lugares para visitar.",
-  image: "https://user-images.githubusercontent.com/22801048/100171954-0b105280-2ea6-11eb-8faa-6ce592a85f7e.jpg",
-  live_demo_link: '/',
-  github_link: 'https://github.com/uaiuaief/country-explorer',
-  tech_used: [
-    'Javascript / CSS3 / HTML5',
-    'Google Search API',
-    'Rest Countries API',
-  ]
-}
-
-const ecommerce = {
-  title: 'E-commerce',
-  description: "Um e-commerce feito em React e Django, com sistema de pagamentos Stripe integrado.",
-  image: "http://24dlmn2bqamt1e72kah59881-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/ezCater-website.png",
-  live_demo_link: '/',
-  github_link: 'https://github.com/uaiuaief/ecommerce-project',
-  tech_used: [
-    'Javascript / CSS3 / HTML5',
-    'Python',
-    'Django Rest Framework',
-    'React js',
-    'Stripe'
-  ]
-}
-
-const project_list = [ecommerce, country_explorer, chess]
+import { content } from '../Content'
 
 
 class Project extends Component {
   render() {
+    let text = content[window.language]['projects-page']
+
     return (
       <div className="project">
         <div className="project-preview-image">
@@ -68,8 +25,8 @@ class Project extends Component {
             ))}
           </div>
           <div className="project-buttons">
-            <a href={this.props.live_demo_link} className="primary-button live-demo">Prévia</a>
-            <a target="blank" href={this.props.github_link} className="primary-button github-code">Código Fonte</a>
+            <a target="blank" href={this.props.live_demo_link} className="primary-button live-demo">{text["preview-button"]}</a>
+            <a target="blank" href={this.props.github_link} className="primary-button github-code">{text["source-button"]}</a>
           </div>
         </div>
       </div>
@@ -78,15 +35,17 @@ class Project extends Component {
 }
 
 
-
 class ProjectsPage extends Component {
   render() {
+    document.title = "Meus Projetos | John B."
+    let text = content[window.language]['projects-page']
+    let project_list = content[window.language]['projects']
     return (
       <>
         <Header location={this.props.location} />
         <Banner
-          title='Meus Projetos'
-          description='For over 10 years I’ve been designing and developing websites. Below are some of my favourites. '
+          title={text["banner-title"]}
+          description={text["banner-description"]}
         />
         <section id="projects-page">
           {project_list.map(each => (
@@ -107,4 +66,4 @@ class ProjectsPage extends Component {
   }
 }
 
-export { ProjectsPage, Project, project_list }
+export { ProjectsPage, Project }

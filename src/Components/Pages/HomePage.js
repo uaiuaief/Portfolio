@@ -2,10 +2,11 @@ import { Component } from 'react';
 import { Header } from '../Header';
 import { Banner } from '../Banner';
 import { CTA } from '../CallToAction';
-import { Project, project_list } from './ProjectsPage';
+import { Project } from './ProjectsPage';
 import { ServiceProvided } from './ServicesPage';
 import { stripes_svg } from '../Svgs'
 import { Link } from 'react-router-dom';
+import { content } from '../Content'
 
 
 class Testimonial extends Component {
@@ -35,7 +36,12 @@ class Testimonial extends Component {
 class HomePage extends Component {
 
   render() {
-    let featured_project = project_list[0];
+    document.title = "Início | John B."
+
+    let text = content[window.language]['home-page']
+    let services = content[window.language]['services-provided']
+    let project_list = content[window.language]['projects']
+    let featured_project = project_list[2];
 
     const quotes = {
       'arnold': {
@@ -52,29 +58,6 @@ class HomePage extends Component {
       }
     }
 
-    const services = [
-      {
-        'icon': 'pen',
-        'title': "Web Design",
-        'description': [
-          {
-            'subtitle': 'User Focused',
-            'description_text': `A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website.`
-          },
-        ]
-      },
-      {
-        'icon': 'monitor',
-        'title': "Web Development",
-        'description': [
-          {
-            'subtitle': 'Responsive and Fast',
-            'description_text': `Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible. `
-          },
-        ]
-      },
-    ]
-
     return (
       <>
         <Header location={this.props.location} />
@@ -83,7 +66,7 @@ class HomePage extends Component {
         <section id="home-page">
           <section id="project-section">
             <div className="section-title">
-              <h1>Featured Project</h1>
+              <h1>{text['section-1-title']}</h1>
             </div>
 
             <Project
@@ -96,27 +79,27 @@ class HomePage extends Component {
             />
 
           </section>
-          <Testimonial quote={quotes['capitão']} />
+          {/* <Testimonial quote={quotes['capitão']} /> */}
 
           <section id="services-section">
             <div className="section-title">
-              <h1>My Services</h1>
+              <h1>{text['section-2-title']}</h1>
             </div>
             <div className="section-inner" >
               <div className="flex">
-                <ServiceProvided service={services[0]} />
-                <ServiceProvided service={services[1]} />
+                <ServiceProvided short={true} service={services[0]} />
+                <ServiceProvided short={true} service={services[1]} />
               </div>
               <div className="top-space">
-                <Link className="primary-button" to="/services">Ver Todos os Serviços</Link>
+                <Link className="primary-button" to="/services">{text['section-2-button']}</Link>
               </div>
 
             </div>
           </section>
 
-          <Testimonial quote={quotes['arnold']} />
+          {/* <Testimonial quote={quotes['arnold']} /> */}
         </section>
-        <CTA/>
+        <CTA />
       </>
     );
   }

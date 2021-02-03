@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { content } from './Content'
 
 class Header extends Component {
     constructor(props) {
@@ -8,9 +9,24 @@ class Header extends Component {
             highlighted: props.location.pathname,
             show_menu: false,
         }
+
     }
 
-    toggleMenu(e) {
+    onScroll = () => {
+        if (this.state.show_menu && window.pageYOffset > 0) {
+            this.toggleMenu()
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.onScroll)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.onScroll);
+    }
+
+    toggleMenu = () => {
         const nav = document.getElementById('mobile-nav')
         const logo = document.querySelector('.logo a')
 
@@ -26,6 +42,7 @@ class Header extends Component {
     }
 
     render() {
+        let text = content[window.language]['navbar']
         return (
             <header>
                 <div className="header-inner">
@@ -37,47 +54,47 @@ class Header extends Component {
                             <Link
                                 className={this.state.highlighted === '/projects' ? 'highlighted' : ''}
                                 to='/projects'>
-                                Projetos
+                                {text['projects']}
                             </Link>
                             <Link
                                 className={this.state.highlighted === '/services' ? 'highlighted' : ''}
                                 to='/services'>
-                                Serviços
+                                {text['services']}
                             </Link>
                             <Link
                                 className={this.state.highlighted === '/about' ? 'highlighted' : ''}
                                 to='/about'>
-                                Sobre Mim
+                                {text['about']}
                             </Link>
                             <Link
                                 className={this.state.highlighted === '/contact' ? 'highlighted' : ''}
                                 to='/contact'>
-                                Contato
+                                {text['contact']}
                             </Link>
                         </nav>
 
                         <div className="toggle-menu">
-                            <button className="icon-wrapper" onClick={e => this.toggleMenu(e)}>
+                            <button className="icon-wrapper" onClick={() => this.toggleMenu()}>
                                 {this.state.show_menu
                                     ?
-                                    <img src="/icons/close.svg" />
+                                    <img src="/icons/close.svg" alt='close-menu' />
                                     :
-                                    <img src="/icons/menu-icon.svg" />
+                                    <img src="/icons/menu-icon.svg" alt='menu' />
                                 }
                             </button>
 
                             <nav id="mobile-nav">
-                                <div className={this.state.highlighted === '/projects' ? "nav-item highlighted": "nav-item"}>
-                                    <Link to='/projects'> Projetos </Link>
+                                <div className={this.state.highlighted === '/projects' ? "nav-item highlighted" : "nav-item"}>
+                                    <Link to='/projects'>{text['projects']}</Link>
                                 </div>
-                                <div className={this.state.highlighted === '/services' ? "nav-item highlighted": "nav-item"}>
-                                    <Link to='/services'> Serviços </Link>
+                                <div className={this.state.highlighted === '/services' ? "nav-item highlighted" : "nav-item"}>
+                                    <Link to='/services'>{text['services']}</Link>
                                 </div>
-                                <div className={this.state.highlighted === '/about' ? "nav-item highlighted": "nav-item"}>
-                                    <Link to='/about'> Sobre Mim </Link>
+                                <div className={this.state.highlighted === '/about' ? "nav-item highlighted" : "nav-item"}>
+                                    <Link to='/about'>{text['about']}</Link>
                                 </div>
-                                <div className={this.state.highlighted === '/contact' ? "nav-item highlighted": "nav-item"}>
-                                    <Link to='/contact'> Contato </Link>
+                                <div className={this.state.highlighted === '/contact' ? "nav-item highlighted" : "nav-item"}>
+                                    <Link to='/contact'>{text['contact']}</Link>
                                 </div>
                             </nav>
                         </div>
