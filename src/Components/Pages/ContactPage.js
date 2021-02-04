@@ -6,7 +6,7 @@ import { content } from '../Content'
 class ContactPage extends Component {
   render() {
     document.title = "Contato | John B."
-    let text = content['pt']['contact-page']
+    let text = content[window.language]['contact-page']
     return (
       <>
         <Header location={this.props.location} />

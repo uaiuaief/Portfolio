@@ -51,8 +51,8 @@ class ServicesPage extends Component {
   render() {
     document.title = "Serviços | John B."
 
-    let text = content['pt']['services-page']
-    let services = content['pt']['services-provided']
+    let text = content[window.language]['services-page']
+    let services = content[window.language]['services-provided']
     return (
       <>
         <Header location={this.props.location} />

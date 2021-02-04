@@ -3,7 +3,7 @@ export const content = {
         "home-page": {
             "banner-title": "Olá, eu sou o John",
             "banner-description": "Um desenvolvedor full-stack de Curitiba-PR. Eu crio websites sob medida, ajudando pessoas a chegarem mais longe online.",
-            "banner-button": "Meus Projetos.",
+            "banner-button": "Meus Projetos",
 
             "section-1-title": "Projeto em Destaque",
             "section-2-title": "Meus Serviços",
@@ -36,7 +36,7 @@ export const content = {
 
             "textblock-2-title": "Porque trabalhar comigo?",
             "textblock-2-paragraph1": "Não tem nada que eu goste mais de fazer do que desenvolver soluções que vão melhorar a vida das pessoas.",
-            "textblock-2-paragraph2": "Eu passo a maior parte do meu tempo tentando aperfeiçoar o que eu faço, e mesmo sabendo que eu nunca serei perfeito, eu vou fazer o meu melhor para chegar perto.",
+            "textblock-2-paragraph2": "Eu passo a maior parte do meu tempo tentando aperfeiçoar o que eu faço, e mesmo sabendo que eu nunca serei perfeito, eu faço o meu melhor para chegar perto.",
             "textblock-2-paragraph3": "Se você tem um projeto e gostaria de trabalhar comigo, entre em contato e nós podemos começar a trabalhar.",
 
             "contact-button": "Fale Comigo"
@@ -76,7 +76,7 @@ export const content = {
         "projects": [
             {
                 "title": "Xadrez",
-                "description": "Um jogo de xadrez no navegador onde você pode jogar com outro jogador ou contra o computador.",
+                "description": "Um jogo de xadrez para navegador onde você pode jogar com outro jogador ou contra o computador.",
                 "image": "/icons/chess_project.png",
                 "live_demo_link": "http://45.77.80.117:5000/",
                 "github_link": "https://github.com/uaiuaief/chess",
@@ -89,7 +89,7 @@ export const content = {
             },
             {
                 "title": "Explorador de Países",
-                "description": "Um site onde você pode aprender sobre novos países, sua língua, cultura e lugares para visitar.",
+                "description": "Um site onde você pode aprender sobre países, sua língua, cultura e lugares para visitar.",
                 "image": "/icons/country_project.png",
                 "live_demo_link": "http://45.77.80.117/",
                 "github_link": "https://github.com/uaiuaief/country-explorer",
@@ -100,7 +100,7 @@ export const content = {
                 ]
             },
             {
-                "title": "E-commerce",
+                "title": "Pellington Orgânicos",
                 "description": "Um e-commerce feito em React e Django, com sistema de pagamentos Stripe integrado.",
                 "image": "/icons/ecommerce_project.png",
                 "live_demo_link": "https://affectionate-sammet-d8c720.netlify.app",
@@ -170,7 +170,7 @@ export const content = {
                         'subtitle': 'HTML / CSS',
                         'description_text': `Criar uma fundação forte para um website significa ter uma boa
                          arquitetura de HTML e CSS. Se você tem um design eu posso criar um código front end
-                         para ele`
+                         para ele.`
                     },
                 ],
                 'summary': [
@@ -187,11 +187,72 @@ export const content = {
     },
 
     "en": {
+        "home-page": {
+            "banner-title": "Hey, I'm John",
+            "banner-description": "A fullstack developer who lives in Brazil. I create bespoke websites to help people go further online.",
+            "banner-button": "My Projects",
+
+            "section-1-title": "Featured Projects",
+            "section-2-title": "My Services",
+            "section-2-button": "View all Services",
+
+        },
+
         "projects-page": {
             "banner-title": "My Projects",
-            "banner-description": "Projects banner en",
+            "banner-description": "For the last 3 years I've been developing applications and websites. Below are some of my favorites.",
             "preview-button": "Live Demo",
             "source-button": "Source Code",
+        },
+
+        "services-page": {
+            "banner-title": "My Services",
+            "banner-description": "Everything I offer with a detailed overview of each.",
+
+        },
+
+        "about-page": {
+            "banner-title": "About Me",
+            "banner-description": "Find out who I am, where I'm from and what I'm all about.",
+
+            "textblock-1-title": "Who I Am",
+            "textblock-1-paragraph1": "My name is Jonathan. I'm a fullstack developer living in Brazil.",
+            "textblock-1-paragraph2": "I'm a computer systems enthusiast and spend most of my time working on my own projects.",
+            "textblock-1-paragraph3": "I strongly believe in technology's potential as a tool to turn the world into a better place, my goal is to be in the frontline of this transformation.",
+
+            "textblock-2-title": "Why Work With Me",
+            "textblock-2-paragraph1": "There's nothing I like doing more than developing solutions that will change people's lives for the better.",
+            "textblock-2-paragraph2": "I spend most of my time trying to perfect what I do, while I know I'll never be perfect, I do my best to come close.",
+            "textblock-2-paragraph3": "If you’ve got a project you’d like to work on with me just get in touch and we can get to work!",
+
+            "contact-button": "Contact Me"
+        },
+
+        "contact-page": {
+            "banner-title": "Contact Me",
+            "banner-description": "If you’d like to chat about a project please fill in the form below and I’ll get back within 1-2 days.",
+
+            "status-text-1": "Available",
+            "status-text-2": "I’m currently taking on new projects!",
+
+            "form-name-label": "Name",
+            "form-email-label": "E-mail",
+            "form-textarea-label": "How can I help?",
+            "form-submit-button": "Send Message"
+        },
+
+        "navbar": {
+            "projects": "Projects",
+            "services": "Services",
+            "about": "About Me",
+            "contact": "Contact",
+        },
+
+        "CTA": {
+            "title": "Let's Work Together",
+            "description": "Have a project you'd like to discuss?",
+            "button": "Get in Touch",
+            "phone": "+55 41 99958-1030"
         },
 
         "footer": {
@@ -200,8 +261,8 @@ export const content = {
 
         "projects": [
             {
-                "title": "Xadrez",
-                "description": "Um jogo de xadrez no navegador onde você pode jogar com outro jogador ou contra o computador.",
+                "title": "Chess",
+                "description": "A browser based chess game where you can play against the computer or another player.",
                 "image": "/icons/chess_project.png",
                 "live_demo_link": "http://45.77.80.117:5000/",
                 "github_link": "https://github.com/uaiuaief/chess",
@@ -213,8 +274,8 @@ export const content = {
                 ]
             },
             {
-                "title": "Explorador de Países",
-                "description": "Um site onde você pode aprender sobre novos países, sua língua, cultura e lugares para visitar.",
+                "title": "Country Explorer",
+                "description": "A website where you can learn about countries, their language, culture and travel destinations.",
                 "image": "/icons/country_project.png",
                 "live_demo_link": "http://45.77.80.117/",
                 "github_link": "https://github.com/uaiuaief/country-explorer",
@@ -225,8 +286,8 @@ export const content = {
                 ]
             },
             {
-                "title": "E-commerce",
-                "description": "Um e-commerce feito em React e Django, com sistema de pagamentos Stripe integrado.",
+                "title": "Pellington Organics",
+                "description": "An eCommerce built with React and Django, with an integrated Stripe payments system.",
                 "image": "/icons/ecommerce_project.png",
                 "live_demo_link": "https://affectionate-sammet-d8c720.netlify.app",
                 "github_link": "https://github.com/uaiuaief/ecommerce-project",
@@ -239,56 +300,71 @@ export const content = {
                 ]
             },
         ],
-
         "services-provided": [
             {
-                'icon': 'pen',
-                'title': "Web Design",
+                'icon': 'monitor',
+                'title': "Back End",
                 'description': [
                     {
-                        'subtitle': 'User Focused',
-                        'description_text': `A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website.`
+                        'subtitle': 'Python',
+                        'description_text': `One of the most popular programming languages, Python has a
+                        big community of developers and a vast amount of libraries and frameworks.
+                        Python's philosophy makes it easy for the developer to write code that's both
+                        simple and high performing. All of that makes Python my favorite programming language.`,
                     },
                     {
-                        'subtitle': 'eCommerce',
-                        'description_text': `Creating a good online store can be hard. Over the years I've learned the best ways to design stores that sell products and provide real value to customers.`
+                        'subtitle': 'Django',
+                        'description_text': `Django is currently Python's most used web framework, being used
+                        by big companies like Instagram, Mozilla and PBS. Django offers many functionalities
+                        right out of the box, allowing the creation of complex and scalable apllications with 
+                        very little code.`,
                     },
                     {
-                        'subtitle': 'Application UI',
-                        'description_text': `The user interface of an application, whether it's mobile or desktop, can make or break a business. Getting the interface right and most importantly of all, making it easy to navigate, are the keys to a successful app.`
+                        'subtitle': 'Django Rest Framework',
+                        'description_text': `DRF is built upon Django and adds many tools to help in the creation of REST APIs.`,
                     },
                 ],
                 'summary': [
                     {
-                        'subtitle': 'User Focused',
-                        'description_text': `A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website.`
+                        'subtitle': 'Secure and Stable',
+                        'description_text': `The success of an application depends upon the creation of a back end that can run
+                        without interruptions and that has no vulnerabilities.`,
                     },
                 ]
             },
             {
-                'icon': 'monitor',
-                'title': "Web Development",
+                'icon': 'pen',
+                'title': "Front End",
                 'description': [
                     {
+                        'subtitle': 'Javascript',
+                        'description_text': `The language of the web, without it the creation of dynamic web apllications
+                        would be an almost impossible task.`,
+                    },
+                    {
+                        'subtitle': 'React',
+                        'description_text': `Websites get more complex every day, and all of that complexity
+                        would have a very high cost if you had to render everything in the back end.
+                        React makes it easy to manage state and to create reusable components, which then
+                        can be used in the creation of dynamic websites that can be rendered by the browser,
+                        reducing the server's load and making the user's experience fast and smooth.
+                        `,
+                    },
+                    {
                         'subtitle': 'HTML / CSS',
-                        'description_text': `Creating a strong foundation for a website means getting the HTML and CSS architecture right. If you've got a design I can create the front end code for it. `
-                    },
-                    {
-                        'subtitle': 'WordPress',
-                        'description_text': `Almost all of the websites I make are done using WordPress and the reason is simple: It just works. You can easily update every piece of content, turn sections on or off and so much more. `
-                    },
-                    {
-                        'subtitle': 'Performance',
-                        'description_text': `Having a fast website is key to keeping people around which ultimately converts them into customers. There are a myriad of techniques involved in making a fast website, all of which I've spent years learning. I build these techniques into every site I code and can also offer this as a standalone service for existing websites. `
+                        'description_text': `Creating a strong foundation for a website means getting the 
+                        HTML and CSS architecture right. If you've got a design I can create the front-end code for it. `
                     },
                 ],
                 'summary': [
                     {
                         'subtitle': 'Responsive and Fast',
-                        'description_text': `Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible. `
+                        'description_text': `Every website should be built with two primary goals: Firstly, 
+                        it needs to work across all devices. Secondly, it needs to be fast as possible. `
                     },
                 ]
             },
-        ]
+
+        ],
     }
 }

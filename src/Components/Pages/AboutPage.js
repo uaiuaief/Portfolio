@@ -8,7 +8,7 @@ import { content } from '../Content'
 class AboutPage extends Component {
   render() {
     document.title = "Sobre Mim | John B."
-    let text = content['pt']['about-page']
+    let text = content[window.language]['about-page']
     return (
       <>
         <Header location={this.props.location} />

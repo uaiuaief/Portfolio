@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 window.language = 'pt'
-// window.language = 'en'
+window.language = 'en'
 
 ReactDOM.render(
   <React.StrictMode>

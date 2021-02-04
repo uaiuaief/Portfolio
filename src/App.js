@@ -16,7 +16,20 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
+          <button style={{
+            position: 'fixed',
+            zIndex: '1654'
+          }}
+          onClick={() => {
+            if (window.language === "en"){
+              window.language = "pt"
+            }
+            else {
+              window.language = "en"
+            }
 
+            this.setState({})
+          }}>change language</button>
           <Route path='/' exact component={HomePage}></Route>
 
           <Route path='/projects' exact component={ProjectsPage}></Route>
