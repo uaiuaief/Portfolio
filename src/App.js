@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HashRouter>
+        <BrowserRouter>
           <Route path='/' exact component={HomePage}></Route>
 
           <Route path='/projects' exact component={ProjectsPage}></Route>
@@ -28,7 +28,7 @@ class App extends Component {
 
           <Footer />
 
-        </HashRouter>
+        </BrowserRouter>
       </div>
     );
   }
