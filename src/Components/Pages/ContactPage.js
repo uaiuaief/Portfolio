@@ -4,9 +4,35 @@ import { Header } from '../Header';
 import { content } from '../Content'
 
 class ContactPage extends Component {
+  state = {
+    name: '',
+    email: '',
+    body: '',
+  }
+
+  onSubmit = async (e) => {
+    e.preventDefault();
+    let form_data = new FormData();
+    form_data.append('name', this.state.name);
+    form_data.append('email', this.state.email);
+    form_data.append('body', this.state.body);
+
+    let url = "http://45.77.80.117:5001/send_message";
+    let res = await fetch(url, {
+      method: "POST",
+      headers: {
+      },
+      body: form_data
+    })
+
+    let data = await res.json();
+
+  }
+
   render() {
     document.title = "Contato | John B."
     let text = content[window.language]['contact-page']
+
     return (
       <>
         <Header location={this.props.location} />
@@ -20,22 +46,22 @@ class ContactPage extends Component {
             <h1>{text['status-text-1']}</h1>
             <h3>{text['status-text-2']}</h3>
           </div>
-          <form>
+          <form onSubmit={e => this.onSubmit(e)}>
             <div className="form-inner">
               <div className="form-row-1">
                 <div className="form-item">
                   <label htmlFor="name-field">{text['form-name-label']}</label>
-                  <input id="name-field" required></input>
+                  <input id="name-field" required onChange={e => this.setState({name: e.target.value})}></input>
                 </div>
                 <div className="form-item half-2">
                   <label htmlFor="email-field">{text['form-email-label']}</label>
-                  <input id="email-field" type="email" required></input>
+                  <input id="email-field" type="email" required onChange={e => this.setState({email: e.target.value})}></input>
                 </div>
               </div>
               <div className="form-row-2">
                 <div className="form-item">
                   <label htmlFor="text-field">{text['form-textarea-label']}</label>
-                  <textarea id="text-field" required> </textarea>
+                  <textarea id="text-field" required onChange={e => this.setState({body: e.target.value})}></textarea>
                 </div>
               </div>
 
