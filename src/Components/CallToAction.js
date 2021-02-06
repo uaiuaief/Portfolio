@@ -19,16 +19,18 @@ class CTA extends Component {
                     </div>
                     <div className="cta-contact-info">
                         <div>
+                            <span style={{width: "24px"}}>
                             {email_svg}
+                            </span>
                             <a href="mailto:email@gmail.com">jhonatasbn14@gmail.com</a>
-                        </div>
-                        <div>
-                            {github_svg}
-                            <a target='blank' href='https://github.com/uaiuaief'>github</a>
                         </div>
                         <div>
                             {phone_svg}
                             <a href="#">{text["phone"]}</a>
+                        </div>
+                        <div>
+                            {github_svg}
+                            <a target='blank' href='https://github.com/uaiuaief'>github</a>
                         </div>
                     </div>
                 </div>

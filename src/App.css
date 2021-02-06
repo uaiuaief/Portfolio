@@ -68,7 +68,7 @@ header {
 }
 
 .menu {
-    width: 40%;
+    min-width: 40%;
     margin-left: auto;
 }
 
@@ -76,9 +76,12 @@ header {
     display: none;
 }
 
+#desktop-nav a:not(:last-child){
+    margin-right: 50px;
+}
+
 nav {
     display: flex;
-    justify-content: space-around; 
 }
 
 nav a {
@@ -487,7 +490,7 @@ nav a.highlighted::after {
 
 .tech-used {
     padding-top: 40px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .tech-item {
@@ -882,7 +885,7 @@ footer {
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
     .primary-button {
         font-size: 1rem;
         padding: 16px 24px;
@@ -972,6 +975,7 @@ footer {
     }
 
     #mobile-nav .nav-item a {
+       display: block;
        color: #5e5e5e;
        font-size: 1.25rem;
     }
@@ -1179,7 +1183,12 @@ footer {
     .project .project-buttons {
         padding-top: 25px;
         display: flex;
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        justify-content: flex-start;
+    }
+
+    .project .project-buttons .primary-button:first-child {
+        margin-right: 1.2rem;
     }
 
     .project-buttons a {
@@ -1339,6 +1348,10 @@ footer {
         padding: 50px 0;
     }
 
+    .cta-call {
+        width: 100%;
+    }
+
     .cta-call h1 {
         font-size: 1.625rem;
     }
@@ -1376,4 +1389,51 @@ footer {
         padding: 25px 0 ;
     }
     /* END FOOTER */
+}
+
+
+/* @media only screen and (max-width: 1200px) and (min-width: 900) { */
+@media (max-width: 1280px) and (min-width: 901px){
+    .cta-inner {
+        width: 92%;
+    }
+
+    #projects-page {
+        width: 92%;
+    }
+
+    .project-preview-image {
+        width: 51%;
+    }
+    .project-preview-content {
+        width: 43%;
+    }
+
+    .project-summary .title {
+        font-size: 2.625rem;
+    }
+
+    .project-summary .description {
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+
+    .project-buttons {
+        padding-top: 35px;
+    }
+
+    .project-buttons .primary-button {
+        font-size: 1.25rem;
+        padding: 20px 28px;
+    }
+
+    .tech-used {
+        padding-top: 35px;
+        padding-bottom: 0;
+    }
+
+    p.tech-item {
+        font-size: 1.125rem;
+    }
+
 }
