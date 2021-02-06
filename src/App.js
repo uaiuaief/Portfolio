@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, HashRouter } from "react-router-dom";
 import './App.css';
 
 // PAGES
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <HashRouter>
           <Route path='/' exact component={HomePage}></Route>
 
           <Route path='/projects' exact component={ProjectsPage}></Route>
@@ -28,7 +28,7 @@ class App extends Component {
 
           <Footer />
 
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
