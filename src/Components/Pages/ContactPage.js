@@ -17,7 +17,7 @@ class ContactPage extends Component {
     form_data.append('email', this.state.email);
     form_data.append('body', this.state.body);
 
-    let url = "http://45.77.80.117:5001/send_message";
+    let url = "https://45.77.80.117:5001/send_message";
     let res = await fetch(url, {
       method: "POST",
       headers: {
