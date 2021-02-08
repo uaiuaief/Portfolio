@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import { content } from '../Content'
 
 class AboutPage extends Component {
+
+  componentDidMount() {
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   render() {
     document.title = "Sobre Mim | John B."
     let text = content[window.language]['about-page']

@@ -35,8 +35,12 @@ class Testimonial extends Component {
 
 class HomePage extends Component {
 
+  componentDidMount() {
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   render() {
-    document.title = "Início | John B."
+    document.title = "John B. | Desenvolvedor Fullstack"
 
     let text = content[window.language]['home-page']
     let services = content[window.language]['services-provided']

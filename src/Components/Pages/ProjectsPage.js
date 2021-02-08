@@ -36,6 +36,11 @@ class Project extends Component {
 
 
 class ProjectsPage extends Component {
+  
+  componentDidMount() {
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   render() {
     document.title = "Meus Projetos | John B."
     let text = content[window.language]['projects-page']

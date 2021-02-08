@@ -48,6 +48,11 @@ class ServiceProvided extends Component {
 
 
 class ServicesPage extends Component {
+  
+  componentDidMount() {
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   render() {
     document.title = "Serviços | John B."
 

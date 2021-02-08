@@ -2,16 +2,19 @@ import { Component } from 'react';
 import { Banner } from '../Banner';
 import { Header } from '../Header';
 import { content } from '../Content'
+import { Redirect } from 'react-router-dom';
 
 class ContactPage extends Component {
   state = {
     name: '',
     email: '',
     body: '',
+    redirect: false
   }
 
   onSubmit = async (e) => {
     e.preventDefault();
+
     let form_data = new FormData();
     form_data.append('name', this.state.name);
     form_data.append('email', this.state.email);
@@ -25,14 +28,24 @@ class ContactPage extends Component {
       body: form_data
     })
 
-    let data = await res.json();
+    this.setState({
+      redirect: true
+    })
+  }
 
+  componentDidMount() {
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   render() {
     document.title = "Contato | John B."
     let text = content[window.language]['contact-page']
 
+    if (this.state.redirect){
+      return (
+        <Redirect to="/contact/success/"></Redirect>
+      )
+    }
     return (
       <>
         <Header location={this.props.location} />

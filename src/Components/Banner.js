@@ -8,6 +8,12 @@ class Banner extends Component {
       return (
         <section id="banner">
           <div className="banner-inner">
+            {this.props.banner_header
+              ?
+              <h1 className="banner-header">{this.props.banner_header}</h1>
+              :
+              ''
+            }
             <h1 className="banner-title">{this.props.title}</h1>
             <h2 className="banner-description"> {this.props.description} </h2>
           </div>
