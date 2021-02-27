@@ -15,17 +15,24 @@ class ContactPage extends Component {
   onSubmit = async (e) => {
     e.preventDefault();
 
-    let form_data = new FormData();
-    form_data.append('name', this.state.name);
-    form_data.append('email', this.state.email);
-    form_data.append('body', this.state.body);
+    // let form_data = new FormData();
+    // form_data.append('name', this.state.name);
+    // form_data.append('email', this.state.email);
+    // form_data.append('message', this.state.body);
 
-    let url = "https://45.77.80.117:5001/send_message";
+    let form_data = {
+      "name": this.state.name,
+      "email": this.state.email,
+      "message": this.state.body,
+    }
+
+    let url = "https://ofvuubwl67.execute-api.sa-east-1.amazonaws.com/Beta/send_email";
     let res = await fetch(url, {
       method: "POST",
-      headers: {
-      },
-      body: form_data
+      mode: 'no-cors',
+      // headers: {
+      // },
+      body: JSON.stringify(form_data)
     })
 
     this.setState({
